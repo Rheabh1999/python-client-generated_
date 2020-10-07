@@ -1,6 +1,9 @@
 import swagger_client
 import json
 
+
+# TODO: Document Class + Functions + Variables
+# TODO: Follow Python Coding Guidelines
 class WiSun:
     devices = dict()
     PCs = dict()
@@ -22,88 +25,173 @@ class WiSun:
 
 
     def _create_device(self, ip: str, port: str):
-        # http://192.168.1.23:5550/Wi-SUN/TBU/1.0.0/ui/
         WISUN_UI = "http://" + ip + ":" + port + "/Wi-SUN/TBU/1.0.0"
         configuration = swagger_client.Configuration(WISUN_UI)
 
-        # create an instance of the API class
+        # Create an instance of the API class (Device)
         api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
 
+        print("Finish creating Device at", ip + ":" + port)
         return api_instance
 
-    def print_device(self, PC, device):
-        print(self.PCs[PC], self.ports[device])
 
-    def config_border_router_gtks_put(self, PC, device):
-        self.print_device(PC, device)
-        self.devices[(self.PCs[PC], self.ports[device])].post_api1("")
-        response_body = self.devices[(self.PCs[PC], self.ports[device])].api_client.last_response.urllib3_response.data.decode('utf-8')
+    def _print_device(self, PC, device):
+        print("Calling Device{device} at PC{PC}", "(" + self.PCs[PC] + ":" + self.ports[device] + ")")
 
-        return response_body
 
-    #functions
-    def config_border_router_gtks_put(self, PC: str, device: str):
+    ### Functions ###
+    def config_border_router_gtks_put(self, PC: int, device: int):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
+        # device.config_border_router_gtks_put("")
+        # response_body = device.api_client.last_response.urllib3_response.data.decode('utf-8')
+        # return response_body
         pass
 
-    def config_border_router_key_lifetimes_put(self, PC: str, device: str):
+
+    def config_border_router_key_lifetimes_put(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def config_border_router_put(self, PC: str, device: str):
+
+    def config_border_router_put(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def config_border_router_revoke_keys_put(self, PC: str, device: str):
+
+    def config_border_router_revoke_keys_put(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def config_chan_plan_bcast_put(self, PC: str, device: str):
+
+    def config_chan_plan_bcast_put(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def config_chan_plan_explicit_put(self, PC: str, device: str):
+
+    def config_chan_plan_explicit_put(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def config_chan_plan_fixed_put(self, PC: str, device: str):
+
+    def config_chan_plan_fixed_put(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def config_chan_plan_reg_op_put(self, PC: str, device: str):
+
+    def config_chan_plan_reg_op_put(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def config_chan_plan_unicast_put(self, PC: str, device: str):
+
+    def config_chan_plan_unicast_put(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def config_dodag_routes_get(self, PC: str, device: str):
+
+    def config_dodag_routes_get(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def config_ip_addresses_get(self, PC: str, device: str):
+
+    def config_ip_addresses_get(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def config_neighbor_table_get(self, PC: str, device: str):
+
+    def config_neighbor_table_get(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def config_phy_put(self, PC: str, device: str):
+
+    def config_phy_put(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def config_preferred_parent_get(self, PC: str, device: str):
+
+    def config_preferred_parent_get(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def config_router_put(self, PC: str, device: str):
+
+    def config_router_put(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def config_security_keys_get(self, PC: str, device: str):
+
+    def config_security_keys_get(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def config_whitelist_put(self, PC: str, device: str):
+
+    def config_whitelist_put(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def run_mode_mode_put(self, PC: str, device: str):
+
+    def run_mode_mode_put(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def subscription_frames_hash_get(self, PC: str, device: str):
+
+    def subscription_frames_hash_get(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def subscription_frames_put(self, PC: str, device: str):
+
+    def subscription_frames_put(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def transmitter_icmpv6_echo_put(self, PC: str, device: str):
+
+    def transmitter_icmpv6_echo_put(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
 
-    def transmitter_udp_put(self, PC: str, device: str):
+
+    def transmitter_udp_put(self, PC: int, device: int, args=None):
+        self._print_device(PC, device)
+        device = self.devices[(self.PCs[PC], self.ports[device])]
+        print(device)
         pass
