@@ -29,3 +29,71 @@ class WiSun:
         api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
 
         return api_instance
+
+    #functions
+    def config_border_router_gtks_put(self, PC: str, device: str):
+        pass
+
+    def config_border_router_key_lifetimes_put(self, PC: str, device: str):
+        pass
+
+    def config_border_router_put(self, PC: str, device: str):
+        pass
+
+    def config_border_router_revoke_keys_put(self, PC: str, device: str):
+        pass
+
+    def config_chan_plan_bcast_put(self, PC: str, device: str):
+        pass
+
+    def config_chan_plan_explicit_put(self, PC: str, device: str):
+        pass
+
+    def config_chan_plan_fixed_put(self, PC: str, device: str):
+        pass
+
+    def config_chan_plan_reg_op_put(self, PC: str, device: str):
+        pass
+
+    def config_chan_plan_unicast_put(self, PC: str, device: str):
+        pass
+
+    def config_dodag_routes_get(self, PC: str, device: str):
+        pass
+
+
+    def config_ip_addresses_get(self, PC: str, device: str):
+        pass
+
+    def config_neighbor_table_get(self, PC: str, device: str):
+        pass
+
+    def config_phy_put(self, PC: str, device: str):
+        pass
+
+    def config_preferred_parent_get(self, PC: str, device: str):
+        pass
+
+    def config_router_put(self, PC: str, device: str):
+        pass
+
+    def config_security_keys_get(self, PC: str, device: str):
+        pass
+
+    def config_whitelist_put(self, PC: str, device: str):
+        pass
+
+    def run_mode_mode_put(self, PC: str, device: str):
+        pass
+
+    def subscription_frames_hash_get(self, PC: str, device: str):
+        pass
+
+    def subscription_frames_put(self, PC: str, device: str):
+        pass
+
+    def transmitter_icmpv6_echo_put(self, PC: str, device: str):
+        pass
+
+    def transmitter_udp_put(self, PC: str, device: str):
+        pass
