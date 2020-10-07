@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # swagger-client
 Test Bed Unit API. NOTE all IPv6 address strings are formatted per RFC 5952.
 
@@ -52,6 +53,7 @@ from swagger_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
+configuration = swagger_client.Configuration(host="http://192.168.56.1:5000/Wi-SUN/TBU/1.0.0")
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
 body = swagger_client.GroupTransientKeys() # GroupTransientKeys | 
 
@@ -123,3 +125,6 @@ Class | Method | HTTP request | Description
 
 
 
+=======
+# python-client-generated
+>>>>>>> b1745fc21982c690db555a9b31082cc7499d577f
