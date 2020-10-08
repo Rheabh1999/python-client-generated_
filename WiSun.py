@@ -36,7 +36,7 @@ class WiSun:
 
 
     def _print_device(self, PC, device):
-        print("Calling Device{device} at PC{PC}", "(" + self.PCs[PC] + ":" + self.ports[device] + ")")
+        print(f"Calling Device{device} at PC{PC}", "(" + self.PCs[PC] + ":" + self.ports[device] + ")")
 
 
     ### Functions ###
@@ -44,10 +44,10 @@ class WiSun:
         self._print_device(PC, device)
         device = self.devices[(self.PCs[PC], self.ports[device])]
         print(device)
-        # device.config_border_router_gtks_put("")
-        # response_body = device.api_client.last_response.urllib3_response.data.decode('utf-8')
-        # return response_body
-        pass
+        body = swagger_client.GroupTransientKeys()  # GroupTransientKeys |
+        device.config_border_router_gtks_put(body)
+        response_body = device.api_client.last_response.urllib3_response.data.decode('utf-8')
+        return response_body
 
 
     def config_border_router_key_lifetimes_put(self, PC: int, device: int, args=None):
