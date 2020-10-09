@@ -40,7 +40,7 @@ class WiSun:
 
 
     ### Functions ###
-    def config_border_router_gtks_put(self, PC: int, device: int):
+    def config_border_router_gtks_put(self, PC: int, device: int, args=None):
         self._print_device(PC, device)
         device = self.devices[(self.PCs[PC], self.ports[device])]
         print(device)
