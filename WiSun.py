@@ -8,8 +8,8 @@ class WiSun:
     """implements all APIs to talk to a DUT
     Atrributes:
     devices (str): contains all information for every device (such as ip address and port number) which it gets from devices.json
-    PCs (int): contains all the ip addresses; each distinct ip address represents a different PC
-    ports (int): contains all the port numbers; each port number represents a device on a specific PC
+    PCs (str): contains all the ip addresses; each distinct ip address represents a different PC
+    ports (str): contains all the port numbers; each port number represents a device on a specific PC
     """
     devices = dict()
     PCs = dict()
@@ -21,8 +21,6 @@ class WiSun:
         ports with the port numbers in devices.json
         Args:
         json (str): path to devices.json file
-        Raises:
-        //
         """
         with open(jsonPath) as f:
             devices = json.load(f)
@@ -45,8 +43,6 @@ class WiSun:
         port (str): port number representing the device on the PC
         Returns:
         api_instance: instance of the API class
-        Raises:
-        //
         """
         WISUN_UI = "http://" + ip + ":" + port + "/Wi-SUN/TBU/1.0.0"
         configuration = swagger_client.Configuration(WISUN_UI)
