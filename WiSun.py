@@ -3,14 +3,15 @@ import json # Standard library
 import swagger_client # Local module
 
 
-# TODO: Document Class + Functions + Variables
+
+
 class WiSun:
     _devices = dict()
     _PCs = dict()
     _ports = dict()
 
-    def __init__(self, json_path):
-        with open(json_path) as f:
+    def __init__(self, jsonPath):
+        with open(jsonPath) as f:
             devices = json.load(f)
 
         for device in devices:
