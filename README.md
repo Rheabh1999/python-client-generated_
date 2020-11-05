@@ -32,7 +32,7 @@ import swagger_client
 Install via [Setuptools](http://pypi.python.org/pypi/setuptools).
 
 ```sh
-python setup.py install --user
+
 ```
 (or `sudo python setup.py install` to install the package for all users)
 
