@@ -54,7 +54,7 @@ class NeighborTableEntry(object):
         'is_parent_status': 'isParentStatus'
     }
 
-    def __init__(self, eui64=None, etx=None, rsl=None, rssi=None, pan_size=None, routing_cost=None, ip_addresses=None, time_since_last_rx=None, is_parent_status=None):  # noqa: E501
+    def __init__(self, eui64="eui64", etx=0, rsl=6, rssi=1, pan_size=5, routing_cost=5, ip_addresses=["FF02::1", "FF02::1"], time_since_last_rx=2, is_parent_status=7):  # noqa: E501
         """NeighborTableEntry - a model defined in Swagger"""  # noqa: E501
 
         self._eui64 = None
