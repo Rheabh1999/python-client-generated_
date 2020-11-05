@@ -104,11 +104,12 @@ if __name__ == "__main__":
     WiSun = Default("./devices.json")
 
     """
-    PC 1, Device 1 : BR
-    PC 1, Device 2 : Device A
-    PC 1, Device 3 : Device B
+    PC 1, Device 1 : BR - 192.168.1.8:5000
+    PC 1, Device 2 : Device A - 192.168.1.8:5002
+    PC 1, Device 3 : Device B - 192.168.1.8:5003
+    
+    Client: 172.23.0.1
     """
-
     for device in range(1, 4):
         configure_devices(WiSun, 1, device)
 
@@ -125,3 +126,5 @@ if __name__ == "__main__":
 
     for device in [1, 3]:
         transmitter_udp(WiSun, 1, device)
+
+    send_ping(WiSun,1, 1)
